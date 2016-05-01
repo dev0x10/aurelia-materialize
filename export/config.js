@@ -20,13 +20,8 @@ System.config({
     "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0-beta.1.2.1",
     "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.1.2.2",
     "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.1.2.0",
-    "bootstrap": "github:twbs/bootstrap@3.3.6",
-    "fetch": "github:github/fetch@0.11.0",
-    "font-awesome": "npm:font-awesome@4.6.1",
-    "text": "github:systemjs/plugin-text@0.0.3",
-    "github:twbs/bootstrap@3.3.6": {
-      "jquery": "npm:jquery@2.2.3"
-    },
+    "fetch": "github:github/fetch@1.0.0",
+    "text": "github:systemjs/plugin-text@0.0.7",
     "npm:aurelia-animator-css@1.0.0-beta.1.2.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1.2.0",
       "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.2.0",
@@ -146,29 +141,23 @@ System.config({
       "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.2.0",
       "aurelia-path": "npm:aurelia-path@1.0.0-beta.1.2.1",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.1.2.0"
-    },
-    "npm:font-awesome@4.6.1": {
-      "css": "github:systemjs/plugin-css@0.1.21"
     }
   },
   bundles: {
     "app-build.js": [
-      "app.html!github:systemjs/plugin-text@0.0.3.js",
+      "app.html!github:systemjs/plugin-text@0.0.7.js",
       "app.js",
       "blur-image.js",
-      "child-router.html!github:systemjs/plugin-text@0.0.3.js",
+      "child-router.html!github:systemjs/plugin-text@0.0.7.js",
       "child-router.js",
       "main.js",
-      "nav-bar.html!github:systemjs/plugin-text@0.0.3.js",
-      "users.html!github:systemjs/plugin-text@0.0.3.js",
+      "nav-bar.html!github:systemjs/plugin-text@0.0.7.js",
+      "users.html!github:systemjs/plugin-text@0.0.7.js",
       "users.js",
-      "welcome.html!github:systemjs/plugin-text@0.0.3.js",
+      "welcome.html!github:systemjs/plugin-text@0.0.7.js",
       "welcome.js"
     ],
     "aurelia.js": [
-      "github:twbs/bootstrap@3.3.6.js",
-      "github:twbs/bootstrap@3.3.6/css/bootstrap.css!github:systemjs/plugin-text@0.0.3.js",
-      "github:twbs/bootstrap@3.3.6/js/bootstrap.js",
       "npm:aurelia-animator-css@1.0.0-beta.1.2.0.js",
       "npm:aurelia-animator-css@1.0.0-beta.1.2.0/aurelia-animator-css.js",
       "npm:aurelia-binding@1.0.0-beta.1.3.2.js",
@@ -251,17 +240,12 @@ System.config({
       "npm:aurelia-templating-router@1.0.0-beta.1.2.0/route-loader.js",
       "npm:aurelia-templating-router@1.0.0-beta.1.2.0/router-view.js",
       "npm:aurelia-templating@1.0.0-beta.1.2.3.js",
-      "npm:aurelia-templating@1.0.0-beta.1.2.3/aurelia-templating.js",
-      "npm:jquery@2.2.3.js",
-      "npm:jquery@2.2.3/dist/jquery.js"
+      "npm:aurelia-templating@1.0.0-beta.1.2.3/aurelia-templating.js"
     ]
   },
   depCache: {
     "blur-image.js": [
       "aurelia-framework"
-    ],
-    "main.js": [
-      "bootstrap"
     ],
     "users.js": [
       "aurelia-framework",
