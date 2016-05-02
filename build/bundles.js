@@ -26,7 +26,11 @@ module.exports = {
         "aurelia-templating-router",
         "aurelia-loader-default",
         "aurelia-history-browser",
-        "aurelia-logging-console"
+        "aurelia-logging-console",
+        'aurelia-materialize-bridge',
+        'aurelia-materialize-bridge/**/*.js',
+        'aurelia-materialize-bridge/**/*.html!text',
+        'aurelia-materialize-bridge/**/*.css!text'
       ],
       "options": {
         "inject": true,
