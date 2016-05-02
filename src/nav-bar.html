@@ -1,30 +1,30 @@
 <template bindable="router">
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#skeleton-navigation-navbar-collapse">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <i class="fa fa-home"></i>
-        <span>${router.title}</span>
-      </a>
+  <md-navbar fixed="true">
+    <div class="navbar-fixed">
+      <nav style="padding:0 10px;">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo left">${router.title}</a>
+          <ul class="right show-on-medium  hide-on-med-and-down">
+            <li md-waves repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+              <a href.bind="row.href">${row.title}</a>
+            </li>
+          </ul>
+          <ul class="right hide-on-med-and-up">
+            <li>
+              <a md-dropdown="activates: dropdownMenu; below-origin: true;">
+                <i class="fa fa-2x fa-terminal" style="height:auto;" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+          <ul id="dropdownMenu" class="dropdown-content">
+            <li md-waves repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+              <a href.bind="row.href" class="amber lighten-3 brown-text">${row.title}</a>
+            </li>
+            <li class="divider"></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-
-    <div class="collapse navbar-collapse" id="skeleton-navigation-navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
-          <a data-toggle="collapse" data-target="#skeleton-navigation-navbar-collapse.in" href.bind="row.href">${row.title}</a>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li class="loader" if.bind="router.isNavigating">
-          <i class="fa fa-spinner fa-spin fa-2x"></i>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  </md-navbar>
 </template>
+
